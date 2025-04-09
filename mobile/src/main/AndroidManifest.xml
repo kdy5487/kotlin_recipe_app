@@ -1,0 +1,94 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"
+        tools:ignore="ScopedStorage" />
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+
+
+
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication"
+        tools:targetApi="31"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".CameraActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+
+        <activity android:name=".RecipeRecommendActivity"
+            android:exported="true"/>
+        <activity android:name=".RecipeHomeActivity"
+            android:exported="true"/>
+        <activity android:name=".RecipeDetailActivity"
+            android:exported="true"/>
+        <activity android:name=".RecipeActivity"
+            android:exported="true"/>
+
+
+        <!-- CommunityBoardActivity: 커뮤니티 게시판 -->
+        <activity android:name=".CommunityBoardActivity" />
+
+        <!-- PostDetailActivity: 게시글 상세 화면 -->
+        <activity android:name=".CommunityPostDetailActivity" />
+
+        <!-- AddPostActivity: 게시글 작성 화면 -->
+        <activity android:name=".AddPostActivity" />
+
+        <!-- AddPostActivity: 게시글 관리 화면 -->
+        <activity android:name=".MyPostsActivity" />
+
+        <!-- AddPostActivity: 게시글 관리 화면 -->
+        <activity android:name=".MyPageActivity" />
+
+        <!-- AddPostActivity: 게시글 관리 화면 -->
+        <activity android:name=".FavoritesActivity" />
+
+
+
+
+        <activity android:name=".SetNotificationActivity" />
+        <activity android:name=".EditNotificationActivity" />
+
+        <activity
+            android:name=".Main"
+            android:exported="true"/>
+        <activity
+            android:name=".Manage_ingredient"
+            android:exported="true" />
+
+        <activity
+            android:name=".MainHomeActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".AddIngredientActivity"
+            android:exported="true" />
+        <activity android:name=".HomeActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+</manifest>

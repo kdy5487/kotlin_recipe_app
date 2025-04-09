@@ -1,0 +1,24 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id("com.google.gms.google-services") version "4.4.1" apply false
+}
+android {
+    namespace 'com.example.myapplication.shared'
+    compileSdkVersion 34
+
+    defaultConfig {
+        minSdkVersion 28
+        targetSdkVersion 34
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation libs.androidx.media
+    implementation libs.firebase.auth
+}

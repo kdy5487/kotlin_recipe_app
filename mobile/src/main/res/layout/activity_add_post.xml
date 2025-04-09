@@ -1,0 +1,83 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 제목 입력 -->
+        <EditText
+            android:id="@+id/etTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="제목 입력"
+            android:layout_marginBottom="8dp" />
+
+        <!-- 내용 입력 -->
+        <EditText
+            android:id="@+id/etContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="내용 입력"
+            android:minHeight="120dp"
+            android:gravity="top"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 레시피 게시글 추가 체크박스 -->
+        <CheckBox
+            android:id="@+id/checkboxRecipe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="레시피 게시글 추가"
+            android:layout_marginBottom="8dp" />
+
+        <!-- 재료 입력 -->
+        <EditText
+            android:id="@+id/etIngredients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="재료 (줄바꿈으로 구분)"
+            android:minHeight="80dp"
+            android:gravity="top"
+            android:visibility="gone"
+            android:layout_marginBottom="8dp" />
+
+        <!-- 조리 과정 입력 -->
+        <EditText
+            android:id="@+id/etInstructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="조리 과정 (줄바꿈으로 구분)"
+            android:minHeight="120dp"
+            android:gravity="top"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 이미지 선택 버튼 -->
+        <Button
+            android:id="@+id/btnSelectImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이미지 선택"
+            android:layout_marginBottom="8dp" />
+
+        <!-- 이미지 미리보기 -->
+        <ImageView
+            android:id="@+id/imgSelectedImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone" />
+
+        <!-- 게시글 저장 버튼 -->
+        <Button
+            android:id="@+id/btnSavePost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="게시글 저장" />
+    </LinearLayout>
+</ScrollView>

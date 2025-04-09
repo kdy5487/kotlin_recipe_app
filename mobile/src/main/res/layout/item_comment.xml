@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/tvCommentContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="16sp"
+        android:paddingEnd="8dp"
+        android:text="댓글 내용"
+        android:textColor="@android:color/black" />
+
+    <ImageButton
+        android:id="@+id/btnDeleteComment"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="?attr/selectableItemBackground"
+        android:src="@drawable/ic_delete"
+        android:contentDescription="댓글 삭제 버튼" />
+</LinearLayout>

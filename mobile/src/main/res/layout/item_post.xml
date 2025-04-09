@@ -1,0 +1,80 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:background="@android:color/white">
+
+        <!-- 게시글 정보 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingEnd="8dp">
+
+            <!-- 제목 -->
+            <TextView
+                android:id="@+id/tvPostTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="게시글 제목" />
+
+            <!-- 내용 미리보기 -->
+            <TextView
+                android:id="@+id/tvPostContentPreview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@android:color/darker_gray"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:layout_marginTop="4dp"
+                android:text="게시글 내용 미리보기" />
+
+            <!-- 추천 수 -->
+            <TextView
+                android:id="@+id/tvPostRecommendations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="추천: 0"
+                android:textSize="12sp"
+                android:textColor="@android:color/holo_blue_dark"
+                android:layout_marginTop="8dp" />
+
+            <!-- 출처 표시 -->
+            <TextView
+                android:id="@+id/tvPostSource"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="출처: community"
+                android:textSize="12sp"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- 즐겨찾기 버튼 -->
+        <ImageButton
+            android:id="@+id/btnFavorite"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_favorite_border"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="즐겨찾기 버튼"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
